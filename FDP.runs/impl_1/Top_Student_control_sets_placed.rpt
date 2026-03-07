@@ -1,0 +1,78 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+----------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
+| Date         : Sat Mar  7 22:34:47 2026
+| Host         : DESKTOP-ET6S6H0 running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file Top_Student_control_sets_placed.rpt
+| Design       : Top_Student
+| Device       : xc7a35t
+----------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |    10 |
+| Unused register locations in slices containing registers |    34 |
++----------------------------------------------------------+-------+
+
+
+2. Histogram
+------------
+
++--------+--------------+
+| Fanout | Control Sets |
++--------+--------------+
+|      2 |            3 |
+|      6 |            1 |
+|      8 |            1 |
+|     14 |            1 |
+|    16+ |            4 |
++--------+--------------+
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              10 |            4 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |             132 |           26 |
+| Yes          | No                    | No                     |              14 |            3 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |             106 |           15 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++-------------------------+-----------------------------------+---------------------------+------------------+----------------+
+|       Clock Signal      |           Enable Signal           |      Set/Reset Signal     | Slice Load Count | Bel Load Count |
++-------------------------+-----------------------------------+---------------------------+------------------+----------------+
+|  basys3_clock_IBUF_BUFG |                                   |                           |                1 |              2 |
+|  clk6p25m_BUFG          | btnR_IBUF                         | btnL_IBUF                 |                1 |              2 |
+| ~clk6p25m_BUFG          |                                   |                           |                1 |              2 |
+|  clk6p25m_BUFG          |                                   |                           |                2 |              6 |
+|  basys3_clock_IBUF_BUFG |                                   | clock/clear               |                1 |              8 |
+|  clk6p25m_BUFG          | task_s/cx                         |                           |                3 |             14 |
+| ~clk6p25m_BUFG          |                                   | btnD_IBUF                 |                5 |             34 |
+| ~clk6p25m_BUFG          | oled/delay[0]_i_1_n_0             | btnD_IBUF                 |                5 |             40 |
+| ~clk6p25m_BUFG          | oled/FSM_onehot_state[31]_i_1_n_0 | btnD_IBUF                 |                9 |             64 |
+| ~clk6p25m_BUFG          |                                   | oled/spi_word[39]_i_1_n_0 |               20 |             90 |
++-------------------------+-----------------------------------+---------------------------+------------------+----------------+
+
+

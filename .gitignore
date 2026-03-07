@@ -1,0 +1,6 @@
+.Xil/
+FDP.hw/
+FDP.ip_users_files/
+FDP.sim/
+*.log
+*.str
