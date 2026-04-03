@@ -1,0 +1,13 @@
+.Xil/
+FDP.hw/
+FDP.ip_users_files/
+FDP.sim/
+*.log
+*.str
+config_settings/
+FDP.cache/
+FDP.ipdefs/
+FDP.runs/
+*.jou
+archive_project_summary.txt
+vivado.pid*
