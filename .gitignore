@@ -15,3 +15,4 @@ vivado.pid*
 *.hw/
 *.ip_user_files/
 *.sim/
+FDP_2026.srcs/sim_1/
