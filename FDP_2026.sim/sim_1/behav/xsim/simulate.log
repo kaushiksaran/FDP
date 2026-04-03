@@ -1,0 +1,9 @@
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+=== MIC SPI Interface Testbench ===
+Input pattern : 0000_1101_1101_1101
+Expected output: 0xDDD (last 12 bits)
+-----------------------------------
+t=5000: CS asserted low, conversion started
+t=505000: SCLK falling edge, presenting bit[15] = 0
+p/Academics/FDP_2026/FDP_2026.srcs/sim_1/new/spi_sim.v" Line 54

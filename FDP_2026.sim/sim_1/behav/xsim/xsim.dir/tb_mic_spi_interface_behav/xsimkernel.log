@@ -1,0 +1,7 @@
+Running: xsim.dir/tb_mic_spi_interface_behav/xsimk.exe -simmode gui -wdb tb_mic_spi_interface_behav.wdb -simrunnum 0 -socket 52614
+Design successfully loaded
+Design Loading Memory Usage: 6848 KB (Peak: 6848 KB)
+Design Loading CPU Usage: 0 ms
+Simulation completed
+Simulation Memory Usage: 9308 KB (Peak: 9308 KB)
+Simulation CPU Usage: 15 ms
