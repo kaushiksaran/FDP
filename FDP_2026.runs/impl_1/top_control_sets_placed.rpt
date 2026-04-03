@@ -1,0 +1,117 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
+| Date         : Fri Apr  3 17:57:22 2026
+| Host         : Jins_Fake_Mac running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file top_control_sets_placed.rpt
+| Design       : top
+| Device       : xc7a35t
+------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |    49 |
+| Unused register locations in slices containing registers |   114 |
++----------------------------------------------------------+-------+
+
+
+2. Histogram
+------------
+
++--------+--------------+
+| Fanout | Control Sets |
++--------+--------------+
+|      2 |            3 |
+|     10 |            3 |
+|     12 |            2 |
+|     14 |            1 |
+|    16+ |           40 |
++--------+--------------+
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |             176 |           31 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |             128 |           24 |
+| Yes          | No                    | No                     |            1962 |          213 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |            2228 |          297 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++----------------+----------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------+------------------+----------------+
+|  Clock Signal  |                                                                    Enable Signal                                                                   |                                                     Set/Reset Signal                                                     | Slice Load Count | Bel Load Count |
++----------------+----------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------+------------------+----------------+
+|  clk_IBUF_BUFG | mic_inst/cs_i_1_n_0                                                                                                                                |                                                                                                                          |                1 |              2 |
+|  clk_IBUF_BUFG | mic_inst/sclk_i_1_n_0                                                                                                                              |                                                                                                                          |                1 |              2 |
+|  clk_IBUF_BUFG | fft_inst/U0/i_synth/axi_wrapper/config_channel_fifo/gen_non_real_time.data_in_fifo_pt1/wr_enable                                                   |                                                                                                                          |                1 |              2 |
+|  clk_IBUF_BUFG | fft_inst/U0/i_synth/xfft_inst/non_floating_point.arch_c.xfft_inst/control/cntrl/pe_cnt/p_1_in                                                      | fft_inst/U0/i_synth/xfft_inst/non_floating_point.arch_c.xfft_inst/control/cntrl/process_state_s                          |                2 |             10 |
+|  clk_IBUF_BUFG | mic_inst/bit_cnt[4]_i_2_n_0                                                                                                                        | mic_inst/bit_cnt[4]_i_1_n_0                                                                                              |                1 |             10 |
+|  clk_IBUF_BUFG | mag_inst/U0/i_synth/i_outfifo.i_output_fifo/fifo0/not_afull                                                                                        |                                                                                                                          |                5 |             10 |
+|  clk_IBUF_BUFG | mic_inst/clk_div[6]_i_2_n_0                                                                                                                        | mic_inst/clk_div[6]_i_1_n_0                                                                                              |                2 |             12 |
+|  clk_IBUF_BUFG | front_end_inst/rd_cnt[8]_i_1_n_0                                                                                                                   |                                                                                                                          |                3 |             12 |
+|  clk_IBUF_BUFG | fft_inst/U0/i_synth/xfft_inst/non_floating_point.arch_c.xfft_inst/control/cntrl/processing_state/ce_pedelay                                        | fft_inst/U0/i_synth/axi_wrapper/sclr_w2c                                                                                 |                3 |             14 |
+|  clk_IBUF_BUFG | front_end_inst/hop_trigger1                                                                                                                        |                                                                                                                          |                2 |             16 |
+|  clk_IBUF_BUFG | front_end_inst/rd_addr                                                                                                                             |                                                                                                                          |                4 |             16 |
+|  clk_IBUF_BUFG | front_end_inst/rd_base_1                                                                                                                           |                                                                                                                          |                2 |             18 |
+|  clk_IBUF_BUFG | fft_inst/U0/i_synth/axi_wrapper/symbols_out_remaining[8]_i_1_n_0                                                                                   | fft_inst/U0/i_synth/axi_wrapper/reset_pipe[1]                                                                            |                2 |             18 |
+|  clk_IBUF_BUFG | mic_inst/mic_valid                                                                                                                                 |                                                                                                                          |                4 |             18 |
+|  clk_IBUF_BUFG | fft_inst/U0/i_synth/xfft_inst/non_floating_point.arch_c.xfft_inst/control/cntrl/processing_state/no_early_reg.I_TC_reg                             | fft_inst/U0/i_synth/xfft_inst/non_floating_point.arch_c.xfft_inst/control/cntrl/loading_state/sclr_or_nfft_we_or_loading |                3 |             18 |
+|  clk_IBUF_BUFG | front_end_inst/fill_cnt[8]_i_1_n_0                                                                                                                 |                                                                                                                          |                2 |             18 |
+|  clk_IBUF_BUFG | fft_inst/U0/i_synth/axi_wrapper/ce_w2c                                                                                                             | fft_inst/U0/i_synth/axi_wrapper/same_input_output_order.inon.no_cyclic_prefix.OUT_ADDR_reg[8]                            |                2 |             18 |
+|  clk_IBUF_BUFG | mag_inst/U0/i_synth/i_outfifo.i_output_fifo/fifo0/m_axis_dout_tvalid                                                                               | max_mag[15]_i_1_n_0                                                                                                      |                4 |             18 |
+|  clk_IBUF_BUFG | fft_inst/U0/i_synth/axi_wrapper/ce_w2c                                                                                                             | fft_inst/U0/i_synth/axi_wrapper/reset_pipe[1]                                                                            |                3 |             20 |
+|  clk_IBUF_BUFG | fft_inst/U0/i_synth/axi_wrapper/xn_index_counter_ce                                                                                                | fft_inst/U0/i_synth/axi_wrapper/sclr_w2c                                                                                 |                4 |             22 |
+|  clk_IBUF_BUFG | fft_inst/U0/i_synth/axi_wrapper/xk_index_counter_ce                                                                                                | fft_inst/U0/i_synth/axi_wrapper/sclr_w2c                                                                                 |                4 |             22 |
+|  clk_IBUF_BUFG |                                                                                                                                                    | mic_inst/sample_timer[12]_i_1_n_0                                                                                        |                3 |             24 |
+|  clk_IBUF_BUFG | front_end_inst/rd_cnt[8]_i_1_n_0                                                                                                                   | front_end_inst/rd_cnt[1]_i_1_n_0                                                                                         |                4 |             24 |
+|  clk_IBUF_BUFG | mic_inst/shift_reg_0                                                                                                                               |                                                                                                                          |                3 |             24 |
+|  clk_IBUF_BUFG | mic_inst/FSM_onehot_state_reg_n_0_[2]                                                                                                              |                                                                                                                          |                4 |             24 |
+|  clk_IBUF_BUFG |                                                                                                                                                    | mag_inst/U0/i_synth/i_has_aresetn.i_reg_reset/first_q                                                                    |                5 |             26 |
+|  clk_IBUF_BUFG | fft_inst/U0/i_synth/axi_wrapper/data_in_channel_fifo/gen_non_real_time.data_in_fifo_pt1/wr_enable                                                  |                                                                                                                          |                2 |             32 |
+|  clk_IBUF_BUFG | max_mag                                                                                                                                            | max_mag[15]_i_1_n_0                                                                                                      |                4 |             32 |
+|  clk_IBUF_BUFG | mag_inst/U0/i_synth/i_synth/gen_cordic.output_stage/gen_rotation.gen_rdy_cr/E[0]                                                                   | mag_inst/U0/i_synth/i_has_aresetn.i_reg_reset/first_q                                                                    |                6 |             32 |
+|  clk_IBUF_BUFG | fft_inst/U0/i_synth/axi_wrapper/data_in_channel_fifo/gen_non_real_time.data_in_fifo_pt1/gen_non_real_time.gen_has_skid_buffer.data_out_2_reg[0][0] | fft_inst/U0/i_synth/axi_wrapper/reset_pipe[1]                                                                            |                3 |             32 |
+|  clk_IBUF_BUFG | fft_inst/U0/i_synth/axi_wrapper/data_in_channel_fifo/gen_non_real_time.data_in_fifo_pt1/gen_non_real_time.gen_has_skid_buffer.data_out_1_reg[0][0] | fft_inst/U0/i_synth/axi_wrapper/reset_pipe[1]                                                                            |                4 |             32 |
+|  clk_IBUF_BUFG | bin_cnt                                                                                                                                            | reset_btn_IBUF                                                                                                           |                9 |             32 |
+|  clk_IBUF_BUFG | mag_inst/U0/i_synth/i_nd_to_rdy/wr_enable                                                                                                          |                                                                                                                          |                3 |             34 |
+|  clk_IBUF_BUFG | front_end_inst/circ_buf_reg_128_191_0_2_i_1_n_0                                                                                                    |                                                                                                                          |                6 |             44 |
+|  clk_IBUF_BUFG | front_end_inst/circ_buf_reg_192_255_0_2_i_1_n_0                                                                                                    |                                                                                                                          |                6 |             44 |
+|  clk_IBUF_BUFG | front_end_inst/circ_buf_reg_0_63_0_2_i_1_n_0                                                                                                       |                                                                                                                          |                6 |             44 |
+|  clk_IBUF_BUFG | front_end_inst/circ_buf_reg_384_447_0_2_i_1_n_0                                                                                                    |                                                                                                                          |                6 |             44 |
+|  clk_IBUF_BUFG | front_end_inst/circ_buf_reg_256_319_0_2_i_1_n_0                                                                                                    |                                                                                                                          |                6 |             44 |
+|  clk_IBUF_BUFG | front_end_inst/circ_buf_reg_320_383_0_2_i_1_n_0                                                                                                    |                                                                                                                          |                6 |             44 |
+|  clk_IBUF_BUFG | front_end_inst/circ_buf_reg_64_127_0_2_i_1_n_0                                                                                                     |                                                                                                                          |                6 |             44 |
+|  clk_IBUF_BUFG | fft_inst/U0/i_synth/axi_wrapper/ce_w2c                                                                                                             | fft_inst/U0/i_synth/axi_wrapper/sclr_w2c                                                                                 |                4 |             54 |
+|  clk_IBUF_BUFG | mag_inst/U0/i_synth/i_has_input_skid.i_2to1/reg1_a_wr                                                                                              |                                                                                                                          |                8 |             66 |
+|  clk_IBUF_BUFG | fft_inst/U0/i_synth/axi_wrapper/data_out_channel/gen_non_real_time.fifo/fifo0/rd_enable                                                            |                                                                                                                          |                5 |             66 |
+|  clk_IBUF_BUFG | fft_inst/U0/i_synth/axi_wrapper/data_out_channel/data_out_fifo_write                                                                               |                                                                                                                          |                5 |             66 |
+|  clk_IBUF_BUFG | mag_inst/U0/i_synth/i_has_input_skid.i_2to1/p_32_in                                                                                                |                                                                                                                          |                7 |             66 |
+|  clk_IBUF_BUFG |                                                                                                                                                    | fft_inst/U0/i_synth/axi_wrapper/reset_pipe[1]                                                                            |               16 |             78 |
+|  clk_IBUF_BUFG |                                                                                                                                                    |                                                                                                                          |               31 |            176 |
+|  clk_IBUF_BUFG | mag_inst/U0/i_synth/i_outfifo.i_output_fifo/fifo0/not_afull                                                                                        | mag_inst/U0/i_synth/i_has_aresetn.i_reg_reset/first_q                                                                    |              233 |           1808 |
+|  clk_IBUF_BUFG | fft_inst/U0/i_synth/axi_wrapper/ce_w2c                                                                                                             |                                                                                                                          |              186 |           1888 |
++----------------+----------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------+------------------+----------------+
+
+
